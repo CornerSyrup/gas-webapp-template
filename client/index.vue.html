@@ -1,0 +1,14 @@
+<script type="text/template" id="demo-app">
+    <h1>{{ greeting }}</h1>
+</script>
+
+<script>
+    Vue.component("demo-app", {
+        data: function () {
+            return {
+                greeting: "Hello World",
+            };
+        },
+        template: "#demo-app",
+    });
+</script>
