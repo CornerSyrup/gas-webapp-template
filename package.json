@@ -1,6 +1,8 @@
 {
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "push": "clasp push",
+        "watch": "clasp push --watch",
+        "deploy": "clasp deploy"
     },
     "devDependencies": {
         "@types/google-apps-script": "^1.0.37"
