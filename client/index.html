@@ -5,13 +5,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <script
+            crossorigin
+            src="https://unpkg.com/react@17/umd/react.development.js"
+        ></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+        ></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js"
+        ></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/@babel/standalone/babel.min.js"
+        ></script>
     </head>
 
     <body>
-        <main>
-            <h1>Hello world</h1>
-        </main>
+        <main id="root"></main>
     </body>
 
+    <?!= HtmlService.createHtmlOutputFromFile('client/index.jsx').getContent() ?>
     <?!= HtmlService.createHtmlOutputFromFile('client/index.js').getContent() ?>
 </html>
