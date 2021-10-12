@@ -1,0 +1,10 @@
+<script>
+    google.script.run
+        .withSuccessHandler((arg) => {
+            console.info(arg);
+        })
+        .withFailureHandler((err) => {
+            console.error(err);
+        })
+        .doSomething();
+</script>
