@@ -1,5 +1,23 @@
 <script type="text/babel">
-    const App = () => <h1>Hello world</h1>;
+    const Link = ReactRouterDOM.Link;
+    const Route = ReactRouterDOM.Route;
+
+    const App = () => (
+        <ReactRouterDOM.HashRouter>
+            <nav>
+                <Link to="/home">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/contact">Contact</Link>
+            </nav>
+
+            <ReactRouterDOM.Switch>
+                <Route exact path="/home" component={Home} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/contact" component={Contact} />
+                <ReactRouterDOM.Redirect to="/home" />
+            </ReactRouterDOM.Switch>
+        </ReactRouterDOM.HashRouter>
+    );
 
     ReactDOM.render(<App />, document.querySelector("#root"));
 </script>
