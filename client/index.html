@@ -20,11 +20,19 @@
     </head>
 
     <body>
-        <main id="app"></main>
+        <main id="app">
+            <nav>
+                <router-link to="/home">Home</router-link>
+                <router-link to="/about">About</router-link>
+                <router-link to="/contact">Contact</router-link>
+            </nav>
+            <router-view></router-view>
+        </main>
     </body>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-    <?!= HtmlService.createHtmlOutputFromFile('client/index.vue').getContent() ?>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <?!= HtmlService.createHtmlOutputFromFile('client/pages.vue').getContent() ?>
     <?!= HtmlService.createHtmlOutputFromFile('client/index.js').getContent() ?>
 </html>

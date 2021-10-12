@@ -11,6 +11,16 @@
 
 <script>
     new Vue({
-        template: `<demo-app></demo-app>`,
+        router: new VueRouter({
+            routes: [
+                { path: "/", redirect: "/home" },
+                { path: "/home", component: { template: "#home-page" } },
+                { path: "/about", component: { template: "#about-page" } },
+                {
+                    path: "/contact",
+                    component: { template: "#contact-page" },
+                },
+            ],
+        }),
     }).$mount("#app");
 </script>
