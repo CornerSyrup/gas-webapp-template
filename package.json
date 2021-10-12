@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "push": "clasp push",
+        "watch": "clasp push --watch",
+        "deploy": "clasp deploy"
+    },
+    "devDependencies": {
+        "@types/google-apps-script": "^1.0.37"
+    }
+}
